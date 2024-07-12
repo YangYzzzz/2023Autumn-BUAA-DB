@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.mapper.ImageBoardMapper">
+    <select id="findPage" resultType="java.util.Map">
+        select u.username, i.id, i.time, i.imgUrl from imageboard i left join user u on u.id = i.userId
+        <where>
+            <if test="username != null and username != ''">
+                and u.username like concat('%', #{username}, '%')
+            </if>
+        </where>
+        limit #{limitStart}, #{pageSize}
+    </select>
+
+    <select id="getImageNum" resultType="java.lang.Integer">
+        select COUNT(*) from imageboard i left join user u on u.id = i.userId
+        <where>
+            <if test="username != null and username != ''">
+                and u.username like concat('%', #{username}, '%')
+            </if>
+        </where>
+    </select>
+</mapper>

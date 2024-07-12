@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.107.136.38:3306/dbhomework?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2b8
+    username: root
+    password: dbhomework
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+#  security:
+#    user:
+#      name: user
+#      password: 123456
+server:
+  port: 8080
+# config xml path
+mybatis:
+  mapper-locations: mapper/*.xml
+  configuration:
+    auto-mapping-behavior: full
+

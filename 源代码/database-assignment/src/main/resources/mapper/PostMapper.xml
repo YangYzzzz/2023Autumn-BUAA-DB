@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.mapper.PostMapper">
+    <select id="findPage" resultType="java.util.HashMap">
+        select post.id, user.username, title, post.time, content, likeNum, commentNum from post left join user on post.userId = user.id
+        <where>
+            <if test="title != null and title != ''">
+                and title like concat('%', #{title}, '%')
+            </if>
+            <if test="username != null and username != ''">
+                and user.username like concat('%', #{username}, '%')
+            </if>
+            <if test="content != null and content != ''">
+                and content like concat('%', #{content}, '%')
+            </if>
+        </where>
+        limit #{limitStart}, #{pageSize}
+    </select>
+
+</mapper>

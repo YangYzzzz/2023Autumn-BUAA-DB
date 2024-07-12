@@ -1,0 +1,207 @@
+#background {
+    background: rgb(253, 235, 240);
+    height:100vh;
+    width:100vw;
+    position:absolute;
+}
+#background .centerArea {
+    /*background: white;*/
+    /*height:550px;*/
+    /*width:80%;*/
+    /*margin: 70px auto auto;*/
+    /*border-radius:50px;*/
+    width: 70vw;
+    height: 80vh;
+    /* 背景颜色 */
+    background-color: #fff; /* 设置边框锐度 */
+    border-radius: 40px; /* 绝对定位 */
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    /*将元素对齐 */
+    transform: translate(15%, -50%);
+    display: flex;
+}
+.centerArea .centerLeft {
+    /*height:100%;*/
+    width:50%;
+    /*border-top-left-radius: 50px;     !* 左上角 *!*/
+    /*border-bottom-left-radius: 50px;  !* 左下角 *!*/
+    /*float:left;*/
+    color: white;
+    border-radius: 40px;
+    flex: 1;
+    background: url("../assets/login.jpg") no-repeat;
+    object-fit: cover;
+    position: relative;
+}
+
+.centerArea .centerRight {
+    height:100%;
+    width:100%;
+    background:white;
+    float:left;
+    border-top-right-radius: 50px;     /* 右上角 */
+    border-bottom-right-radius: 50px;  /* 右下角 */
+}
+.centerRight1 {
+    height:100%;
+    width:40%;
+    background:white;
+    margin-left:60px;
+    float:left;
+    border-top-left-radius: 50px;     /* 左上角 */
+    border-bottom-left-radius: 50px;  /* 左下角 */
+}
+.centerLeft1 {
+    height:100%;
+    width:40%;
+    border-top-right-radius: 50px;     /* 右上角 */
+    border-bottom-right-radius: 50px;  /* 右下角 */
+    float:left;
+    margin-left:80px;
+    margin-top: 80px;
+}
+.button1 {
+    width:200px;
+    background-color: rgb(224, 123, 150);
+    color: white;
+    /*margin-bottom: 100px;*/
+}
+.next {
+    /*width:300px;*/
+    /*height:20px;*/
+    /*background: white;*/
+    margin-top: 50px;
+    margin-left:100px;
+    /*margin-bottom: 300px;*/
+}
+.next1 {
+    /*width:300px;*/
+    /*height:30px;*/
+    /*background: white;*/
+    margin-top: 50px;
+    margin-left:100px;
+    /*margin-bottom: 200px;*/
+}
+.centerRight .textArea {
+    margin-top:10px;
+    width:400px;
+    height:300px;
+    margin-left:auto;
+    margin-right: auto;
+    background:white;
+    border-radius: 10px;
+}
+.top {
+    width:400px;
+    height:100px;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    font-weight: bold;
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 20%;
+    color: #342f2f;
+}
+.reload {
+     width: 65%;
+     height: 15px;
+     border-radius: 10px;
+     border: 1px solid rgb(227, 227, 227);
+     padding: 10px;
+     outline: none;
+     transition: 0.5s;
+     margin-top: 12px;
+     margin-bottom: 12px;
+}
+.inputs {
+    width: 80%;
+    height: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(227, 227, 227);
+    padding: 10px;
+    outline: none;
+    transition: 0.5s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.inputs:focus {
+    border: 1px solid rgb(224, 123, 150);
+}
+.sex {
+    width: 18%;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(227, 227, 227);
+    padding: 5px;
+    outline: none;
+    transition: 0.5s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.inputLine {
+    width: 80%;
+    height: 15px;
+}
+.date {
+    width: 14%;
+    height: 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(227, 227, 227);
+    padding: 5px;
+    outline: none;
+    transition: 0.5s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.calender {
+    width: 5px;
+    height: 15px;
+}
+.thirdTitle {
+    background: #181818;
+}
+.labelArea {
+    width:100%;
+    height:60px;
+    background: white;
+    margin-bottom: 20px;
+}
+.top1 {
+    width:400px;
+    height:100px;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 20px;
+    color: #342f2f;
+}
+.labelArea_inBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrollbar-flex-content {
+    display: flex;
+}
+.scrollbar-demo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    background: white;
+    color: white;
+}

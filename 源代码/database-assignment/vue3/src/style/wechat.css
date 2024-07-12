@@ -1,0 +1,160 @@
+
+.container{
+    height: 560px;
+    width: 800px;
+    border-radius: 4px;
+    border: 0.5px solid #eff6fe;
+    background-color: #eff6fe;
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+    margin-left:60px;
+    margin-top:5%;
+}
+.content{
+    width: calc(100% - 40px);
+    padding: 20px;
+    overflow-y: scroll;
+    flex: 1;
+}
+.content:hover::-webkit-scrollbar-thumb{
+    background:rgba(0,0,0,0.1);
+}
+.bubble{
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    color: #000;
+    word-wrap:break-word;
+    word-break:normal;
+}
+.item-left .bubble{
+    margin-left: 15px;
+    background-color: #fdfdfc;
+}
+.item-left .bubble:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 10px solid  #fdfdfc;
+    border-bottom: 10px solid transparent;
+    left: -20px;
+}
+.item-right .bubble{
+    color:white;
+    margin-right: 15px;
+    background-color: #f3b5b5;
+}
+.item-right .bubble:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid #f3b5b5;
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    right: -20px;
+}
+.item{
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+}
+.item.item-right{
+    justify-content: flex-end;
+}
+.item.item-center{
+    justify-content: center;
+}
+.item.item-center span{
+    font-size: 12px;
+    padding: 2px 4px;
+    color: #fff;
+    background-color: #dadada;
+    border-radius: 3px;
+    user-select:none;
+}
+
+.avatar img{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+.input-area{
+    border-top:0.5px solid #c4b9b9;
+    height: 150px;
+    display: flex;
+    flex-flow: column;
+    background-color: #eff6fe;
+}
+textarea{
+    background-color: #eff6fe;
+    margin: 5px 10px;
+    flex: 1;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    outline:none;
+    resize:none;
+    font-family: "Microsoft YaHei UI Light", serif;
+}
+.button-area{
+    display: flex;
+    height: 40px;
+    margin-right: 10px;
+    line-height: 40px;
+    padding: 5px;
+    justify-content: flex-end;
+}
+.button-area button{
+    width: 80px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    float: right;
+    cursor: pointer;
+}
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* 当滚动条滑块处于悬停状态时 */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.title {
+    height:40px;
+    width:100%;
+    background: #eff6fe;
+}
+.titleName{
+    height:20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left:30px;
+}
+.c {
+    color:white;
+}

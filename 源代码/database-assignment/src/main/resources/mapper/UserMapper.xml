@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.mapper.UserMapper">
+    <select id="findPage" resultType="com.example.entity.User">
+        select * from user
+        <where>
+            <if test="username != null and username != ''">
+                and username like concat('%', #{username}, '%')
+            </if>
+            <if test="major != null and major != ''">
+                and major like concat('%', #{major}, '%')
+            </if>
+            <if test="sex != null and sex != ''">
+                and sex like concat('%', #{sex}, '%')
+            </if>
+            <if test="studentId != null and studentId != ''">
+                and studentId like concat('%', #{studentId}， '%')
+            </if>
+        </where>
+        limit #{limitStart}, #{pageSize}
+    </select>
+
+    <delete id="delBatch">
+        delete from user
+        <where>
+            id in
+            (
+                <foreach collection="ids" item="id" separator=",">
+                    #{id}
+                </foreach>
+            )
+        </where>
+    </delete>
+
+    <update id="updateUser" parameterType="com.example.entity.User">
+        update user
+        <set>
+            <if test="sex != null and sex != ''">
+                sex = #{sex},
+            </if>
+            <if test="studentId != null and studentId != ''">
+                studentId = #{studentId},
+            </if>
+            <if test="major != null and major != ''">
+                major = #{major},
+            </if>
+            <if test="role != null and role != ''">
+                user.role = #{role},
+            </if>
+            <if test="username != null and username != ''">
+                username = #{username},
+            </if>
+            <if test="grade != null and grade != ''">
+                grade = #{grade},
+            </if>
+            <if test="nickname != null and nickname != ''">
+                nickname = #{nickname},
+            </if>
+            <if test="address != null and address != ''">
+                address = #{address},
+            </if>
+            <if test="signature != null and signature != ''">
+                signature = #{signature},
+            </if>
+            <if test="avatarUrl != null and avatarUrl != ''">
+                avatarUrl = #{avatarUrl},
+            </if>
+            <if test="backgroundUrl != null and backgroundUrl != ''">
+                backgroundUrl = #{backgroundUrl},
+            </if>
+            <if test="birthday != null and birthday != ''">
+                birthday = #{birthday},
+            </if>
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+
+    <select id="getUsersBySex" resultType="com.example.entity.User">
+        select * from user
+        <where>
+            sex = #{targetSex}
+            <if test="friends != null and friends.size() > 0">
+                and
+                id not in
+                (
+                <foreach collection="friends" item="id" separator=",">
+                    #{id}
+                </foreach>
+                )
+            </if>
+        </where>
+    </select>
+</mapper>

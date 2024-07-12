@@ -1,0 +1,47 @@
+.backGround {
+    background-image: url('../image/chatBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+.left {
+    margin-left: 8%;
+    margin-top: 5%;
+    height:600px;
+}
+.img {
+    height:30px;
+    width:30px;
+    border-radius: 100%;
+}
+.name {
+    margin-left: 20px;
+}
+.circle {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 100%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:30px;
+}
+
+.number {
+    color: white;
+    font-size: 12px;
+}
+.titleFont {
+    font-size: 18px;
+}
+.unClick {
+    margin-top: 120px;
+    margin-left: 220px;
+    font-family: "Microsoft YaHei UI Light", serif;
+    font-size: 25px;
+}
